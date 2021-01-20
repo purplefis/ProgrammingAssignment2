@@ -31,7 +31,7 @@ cacheSolve <- function(x, ...) {
   }
   message("No cache, computing")
   m <- x$get()
-  inv = solve(m)
+  inv = solve(m,...)
   x$setinverse(inv)
   return(inv)
 }
